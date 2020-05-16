@@ -140,7 +140,7 @@ namespace EjerciciosCap1_2y3
                         Console.Write("\nDigite la Longitud de un Lado: ");
                     LogLados = int.Parse(Console.ReadLine());
                     int perimetro = NumLados * LogLados;
-                        Console.WriteLine($"\nEl Perimetro Regular del Poligono es: [{perimetro}]");
+                        Console.WriteLine($"\nEl Perimetro del Poligono es: [{perimetro}]");
                         Console.WriteLine("----------------------------------------------------------------");
                 break;
                 case 2:
