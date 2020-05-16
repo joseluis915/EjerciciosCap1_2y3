@@ -6,35 +6,97 @@ namespace EjerciciosCap1_2y3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\n=======================================[ CAPITULO 1 ]=======================================\n");
-            Cap1();
-            Console.WriteLine("\n\n=======================================[ CAPITULO 2 ]=======================================\n");
-            Cap2();
-            Console.WriteLine("\n\n=======================================[ CAPITULO 3 ]=======================================\n");
-            Cap3();
-            Console.WriteLine("\n=====================================[ FIN DEL PROGRAMA ]=====================================");
+            MenuPrincipal();
+        }
+        static void MenuPrincipal()
+        {
+            Console.WriteLine("=======================");
+            Console.WriteLine("Ejercicios del Libro\n");
+            Console.WriteLine("1) Caputulo 1");
+            Console.WriteLine("2) Caputulo 2");
+            Console.WriteLine("3) Caputulo 3");
+            Console.WriteLine("4) Salir");
+            Console.WriteLine("=======================");
+            Console.Write("\nDigite una opcion: ");
+            int Capitulos;
+            Capitulos = int.Parse(Console.ReadLine());
+            Console.WriteLine("=========================");
+
+            switch (Capitulos)
+            {
+                case 1:
+                    Console.Clear();
+                    Cap1();
+                    Console.Write("\nPresione cualquier tecla para volver al menu... ");
+                    Console.ReadKey();
+                    break;
+                case 2:
+                    Cap2();
+                    Console.Write("\nPresione cualquier tecla para volver al menu... ");
+                    Console.ReadKey();
+                    break;
+                case 3:
+                    Cap3();
+                    Console.Write("\nPresione cualquier tecla para volver al menu... ");
+                    Console.ReadKey();
+                    break;
+                case 4:
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("\n***Error*** Opcion no valida.");
+                break;
+            }
+            Console.Clear();
+            MenuPrincipal();
         }
         static void Cap1()
         {
-            //=================================[EJERCICIO #1]=================================
-            Console.WriteLine("_______________________[EJERCICIO #1]______________________");
-            Console.WriteLine("Programa que imprime mi nombre en la ventana de la consola.");
-            Console.WriteLine("-----------------------------------------------------------");
-            Console.WriteLine("Mi nombre es:\n");
-            Console.WriteLine("José Luis Burgos Hernández");
-            Console.WriteLine("-----------------------------------------------------------");
-            //=================================[EJERCICIO #5]=================================
-            Console.WriteLine("\n\n__________________[EJERCICIO #5]__________________");
-            Console.WriteLine("Agrega más mensajes a la aplicación que ha creado.");
-            Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine("Hola,");
-            Console.WriteLine("Estoy añadiendo");
-            Console.WriteLine("Mas mensajes");
-            Console.WriteLine("xD");
-            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("==============================");
+            Console.WriteLine("Capitulo 1:\n");
+            Console.WriteLine("1) Ejercicio #1");
+            Console.WriteLine("2) Ejercicio #5");
+            Console.WriteLine("3) Volver al Menu Principal");
+            Console.WriteLine("==============================");
+            Console.Write("\nDigite una opcion: ");
+            int EjerciciosCap1;
+            EjerciciosCap1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("==============================");
+
+            switch (EjerciciosCap1)
+            {
+                case 1:
+                    //=================================[EJERCICIO #1]=================================
+                    Console.Clear();
+                    Console.WriteLine("_______________________[EJERCICIO #1]______________________");
+                    Console.WriteLine("Programa que imprime mi nombre en la ventana de la consola.");
+                    Console.WriteLine("-----------------------------------------------------------");
+                    Console.WriteLine("Mi nombre es:\n");
+                    Console.WriteLine("José Luis Burgos Hernández");
+                    Console.WriteLine("-----------------------------------------------------------");
+                break;
+                case 2:
+                    //=================================[EJERCICIO #5]=================================
+                    Console.Clear();
+                    Console.WriteLine("__________________[EJERCICIO #5]__________________");
+                    Console.WriteLine("Agrega más mensajes a la aplicación que ha creado.");
+                    Console.WriteLine("--------------------------------------------------");
+                    Console.WriteLine("Hola,");
+                    Console.WriteLine("Estoy añadiendo");
+                    Console.WriteLine("Mas mensajes");
+                    Console.WriteLine("xD");
+                    Console.WriteLine("--------------------------------------------------");
+               break;
+               case 3:
+               break;
+                default:
+                    Console.WriteLine("\n***Error*** Opcion no valida.");
+               break;
+            }
         }
         static void Cap2()
         {
+            Console.WriteLine("\n=======================================[ CAPITULO 2 ]=======================================\n");
             //=================================[EJERCICIO #1]=================================
             Console.WriteLine("_________________________[EJERCICIO #1]_________________________");
             Console.WriteLine("Programa que calcula el perímetro de cualquier polígono regular.");
@@ -86,6 +148,7 @@ namespace EjerciciosCap1_2y3
         }
         static void Cap3()
         {
+            Console.WriteLine("\n=======================================[ CAPITULO 3 ]=======================================\n");
             //=================================[EJERCICIO #1]=================================
             Console.WriteLine("____________________[EJERCICIO #1]___________________");
             Console.WriteLine("Programa que pide un numero y dice si es Par o Impar.");
