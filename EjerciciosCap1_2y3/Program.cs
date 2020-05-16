@@ -27,24 +27,29 @@ namespace EjerciciosCap1_2y3
                 case 1:
                     Console.Clear();
                     Cap1();
-                    Console.Write("\nPresione cualquier tecla para volver al menu... ");
+                    Console.Write("\nPresione cualquier tecla para volver al menu principal... ");
                     Console.ReadKey();
                     break;
                 case 2:
+                    Console.Clear();
                     Cap2();
-                    Console.Write("\nPresione cualquier tecla para volver al menu... ");
+                    Console.Write("\nPresione cualquier tecla para volver al menu principal... ");
                     Console.ReadKey();
                     break;
                 case 3:
+                    Console.Clear();
                     Cap3();
-                    Console.Write("\nPresione cualquier tecla para volver al menu... ");
+                    Console.Write("\nPresione cualquier tecla para volver al menu principal... ");
                     Console.ReadKey();
                     break;
                 case 4:
                     Environment.Exit(0);
                     break;
                 default:
-                    Console.WriteLine("\n***Error*** Opcion no valida.");
+                    Console.Write("\n\n***Error*** Debes digitar una opcion del 1 al 4.");
+                    Console.ReadKey();
+                    Console.Clear();
+                    MenuPrincipal();
                 break;
             }
             Console.Clear();
@@ -90,61 +95,99 @@ namespace EjerciciosCap1_2y3
                case 3:
                break;
                 default:
-                    Console.WriteLine("\n***Error*** Opcion no valida.");
-               break;
+                    Console.Write("\n\n***Error*** Debes digitar una opcion del 1 al 3.");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Cap1();
+                    break;
             }
         }
         static void Cap2()
         {
-            Console.WriteLine("\n=======================================[ CAPITULO 2 ]=======================================\n");
-            //=================================[EJERCICIO #1]=================================
-            Console.WriteLine("_________________________[EJERCICIO #1]_________________________");
-            Console.WriteLine("Programa que calcula el perímetro de cualquier polígono regular.");
-            Console.WriteLine("----------------------------------------------------------------");
-            int NumLados;
-            int LogLados;
-            Console.Write("Digite el Numero de Lados: ");
-            NumLados = int.Parse(Console.ReadLine());
-            Console.Write("\nDigite la Longitud de un Lado: ");
-            LogLados = int.Parse(Console.ReadLine());
-            int perimetro = NumLados * LogLados;
-            Console.WriteLine($"\nEl Perimetro Regular del Poligono es: [{perimetro}]");
-            Console.WriteLine("----------------------------------------------------------------");
-            //=================================[EJERCICIO #3]=================================
-            Console.WriteLine("\n\n___________________[EJERCICIO #3]____________________");
-            Console.WriteLine("Programa que transforma de grados a radianes.");
-            Console.WriteLine("-----------------------------------------------------");
-            int Grados;
-            Console.Write("Digite los Grados: ");
-            Grados = int.Parse(Console.ReadLine());
-            double Radial = (Grados * Math.PI / 180);
-            Console.WriteLine($"\nLa convercion de [{Grados}] Grados a Raldial es: [{Math.Round(Radial, 4)}]");
-            Console.WriteLine("-----------------------------------------------------");
-            //=================================[EJERCICIO #4]=================================
-            Console.WriteLine("\n\n__________________________[EJERCICIO #4]__________________________");
-            Console.WriteLine("Programa que transforma de grados Centígrados a grados Fahrenheit.");
-            Console.WriteLine("------------------------------------------------------------------");
-            double Centigrados;
-            Console.Write("***Si tiene decimales digite una Coma (,) No un punto (.)***\n\n");
-            Console.Write("Digite los Grados Celsios: ");
-            Centigrados = double.Parse(Console.ReadLine());
-            double Fahren = (Centigrados * 9 / 5) + 32;
-            Console.WriteLine($"\nLa convercion de [{Centigrados} *C] a Fahrenheit es: [{Fahren} *F]");
-            Console.WriteLine("------------------------------------------------------------------");
-            //=================================[EJERCICIO #5]=================================
-            Console.WriteLine("\n\n______________________________[EJERCICIO #5]_______________________________");
-            Console.WriteLine("Programa que convierte de Dólares a Euros y pide el tipo de cambio del día.");
-            Console.WriteLine("---------------------------------------------------------------------------");
-            double Dolar;
-            double Cambio;
-            Console.Write("***Si tiene decimales digite una Coma (,) No un punto (.)***\n\n");
-            Console.Write("Digite la Cantidad de Dolares: ");
-            Dolar = double.Parse(Console.ReadLine());
-            Console.Write("\nDigite la Trasa de Cambio Actual de (Dolar a Euro): ");
-            Cambio = double.Parse(Console.ReadLine());
-            double Euro = Dolar * Cambio;
-            Console.WriteLine($"\nLa convercion de [{Dolar} US] a Euros es: [{Math.Round(Euro, 2)} EUR]");
-            Console.WriteLine("---------------------------------------------------------------------------");
+            Console.WriteLine("==============================");
+            Console.WriteLine("Capitulo 2:\n");
+            Console.WriteLine("1) Ejercicio #1");
+            Console.WriteLine("2) Ejercicio #3");
+            Console.WriteLine("3) Ejercicio #4");
+            Console.WriteLine("4) Ejercicio #5");
+            Console.WriteLine("5) Volver al Menu Principal");
+            Console.WriteLine("==============================");
+            Console.Write("\nDigite una opcion: ");
+            int EjerciciosCap2;
+            EjerciciosCap2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("==============================");
+
+            switch (EjerciciosCap2)
+            {
+                case 1:
+                    //=================================[EJERCICIO #1]=================================
+                    Console.Clear();
+                    Console.WriteLine("_________________________[EJERCICIO #1]_________________________");
+                    Console.WriteLine("Programa que calcula el perímetro de cualquier polígono regular.");
+                    Console.WriteLine("----------------------------------------------------------------");
+                    int NumLados;
+                    int LogLados;
+                        Console.Write("Digite el Numero de Lados: ");
+                    NumLados = int.Parse(Console.ReadLine());
+                        Console.Write("\nDigite la Longitud de un Lado: ");
+                    LogLados = int.Parse(Console.ReadLine());
+                    int perimetro = NumLados * LogLados;
+                        Console.WriteLine($"\nEl Perimetro Regular del Poligono es: [{perimetro}]");
+                        Console.WriteLine("----------------------------------------------------------------");
+                break;
+                case 2:
+                    //=================================[EJERCICIO #3]=================================
+                    Console.Clear();
+                    Console.WriteLine("___________________[EJERCICIO #3]____________________");
+                    Console.WriteLine("Programa que transforma de grados a radianes.");
+                    Console.WriteLine("-----------------------------------------------------");
+                    int Grados;
+                        Console.Write("Digite los Grados: ");
+                    Grados = int.Parse(Console.ReadLine());
+                    double Radial = (Grados * Math.PI / 180);
+                        Console.WriteLine($"\nLa convercion de [{Grados}] Grados a Raldial es: [{Math.Round(Radial, 4)}]");
+                        Console.WriteLine("-----------------------------------------------------");
+                    break;
+                case 3:
+                    //=================================[EJERCICIO #4]=================================
+                    Console.Clear();
+                    Console.WriteLine("__________________________[EJERCICIO #4]__________________________");
+                    Console.WriteLine("Programa que transforma de grados Centígrados a grados Fahrenheit.");
+                    Console.WriteLine("------------------------------------------------------------------");
+                    double Centigrados;
+                        Console.Write("***Si tiene decimales digite una Coma (,) No un punto (.)***\n\n");
+                        Console.Write("Digite los Grados Celsios: ");
+                    Centigrados = double.Parse(Console.ReadLine());
+                    double Fahren = (Centigrados * 9 / 5) + 32;
+                        Console.WriteLine($"\nLa convercion de [{Centigrados} *C] a Fahrenheit es: [{Fahren} *F]");
+                        Console.WriteLine("------------------------------------------------------------------");
+                    break;
+                case 4:
+                    //=================================[EJERCICIO #5]=================================
+                    Console.Clear();
+                    Console.WriteLine("______________________________[EJERCICIO #5]_______________________________");
+                    Console.WriteLine("Programa que convierte de Dólares a Euros y pide el tipo de cambio del día.");
+                    Console.WriteLine("---------------------------------------------------------------------------");
+                    double Dolar;
+                    double Cambio;
+                        Console.Write("***Si tiene decimales digite una Coma (,) No un punto (.)***\n\n");
+                        Console.Write("Digite la Cantidad de Dolares: ");
+                    Dolar = double.Parse(Console.ReadLine());
+                        Console.Write("\nDigite la Trasa de Cambio Actual de (Dolar a Euro): ");
+                    Cambio = double.Parse(Console.ReadLine());
+                    double Euro = Dolar * Cambio;
+                        Console.WriteLine($"\nLa convercion de [{Dolar} US] a Euros es: [{Math.Round(Euro, 2)} EUR]");
+                        Console.WriteLine("---------------------------------------------------------------------------");
+                    break;
+                case 5:
+                    break;
+                default:
+                    Console.Write("\n\n***Error*** Debes digitar una opcion del 1 al 5.");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Cap2();
+                    break;
+            } 
         }
         static void Cap3()
         {
