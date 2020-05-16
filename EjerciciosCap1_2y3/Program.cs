@@ -10,15 +10,18 @@ namespace EjerciciosCap1_2y3
         }
         static void MenuPrincipal()
         {
+            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("Hecho por: Jose Luis Burgos Hernandez - 2015-0565");
+            Console.WriteLine("-------------------------------------------------\n");
             Console.WriteLine("========================");
             Console.WriteLine("     MENU PRINCIPAL");
             Console.WriteLine("========================");
             Console.WriteLine("\nEjercicios del Libro");
             Console.WriteLine("--------------------");
-            Console.WriteLine("1) Caputulo 1");
-            Console.WriteLine("2) Caputulo 2");
-            Console.WriteLine("3) Caputulo 3");
-            Console.WriteLine("4) Salir");
+            Console.WriteLine("1) Capitulo 1");
+            Console.WriteLine("2) Capitulo 2");
+            Console.WriteLine("3) Capitulo 3");
+            Console.WriteLine("\n4) Salir");
             Console.WriteLine("========================");
             Console.Write("\nDigite una opcion: ");
             int Capitulos;
@@ -65,7 +68,7 @@ namespace EjerciciosCap1_2y3
             Console.WriteLine("---------------");
             Console.WriteLine("1) Ejercicio #1");
             Console.WriteLine("2) Ejercicio #5");
-            Console.WriteLine("3) Volver al Menu Principal");
+            Console.WriteLine("\n3) Volver al Menu Principal");
             Console.WriteLine("==============================");
             Console.Write("\nDigite una opcion: ");
             int EjerciciosCap1;
@@ -115,7 +118,7 @@ namespace EjerciciosCap1_2y3
             Console.WriteLine("2) Ejercicio #3");
             Console.WriteLine("3) Ejercicio #4");
             Console.WriteLine("4) Ejercicio #5");
-            Console.WriteLine("5) Volver al Menu Principal");
+            Console.WriteLine("\n5) Volver al Menu Principal");
             Console.WriteLine("==============================");
             Console.Write("\nDigite una opcion: ");
             int EjerciciosCap2;
@@ -201,7 +204,7 @@ namespace EjerciciosCap1_2y3
             Console.WriteLine("---------------");
             Console.WriteLine("1) Ejercicio #1");
             Console.WriteLine("2) Ejercicio #4");
-            Console.WriteLine("3) Volver al Menu Principal");
+            Console.WriteLine("\n3) Volver al Menu Principal");
             Console.WriteLine("==============================");
             Console.Write("\nDigite una opcion: ");
             int EjerciciosCap3;
